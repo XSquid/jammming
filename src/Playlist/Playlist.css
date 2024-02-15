@@ -1,0 +1,11 @@
+.playlistcomponent{
+    padding-top: 2vh;
+}
+
+
+#playlistTitle{
+    background:transparent;
+    border: none;
+    font-size: 2.5rem;
+    text-align:center;
+}
