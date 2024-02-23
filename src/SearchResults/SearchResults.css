@@ -1,0 +1,15 @@
+.searchcomponent{
+    border-top: 2px solid black;
+    background-color: rgba(8,0,80, 0.8);
+    margin-left: 10%;   
+    margin-right: 10%;
+    min-height: 75vh;
+    color: white;
+}
+
+
+.searchcomponent h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5em;
+    font-weight: 100;
+}

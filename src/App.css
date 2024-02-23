@@ -3,14 +3,13 @@
   background:
   /* top, transparent black, faked with gradient */ 
   linear-gradient(
-    rgba(70, 70, 70, 0.5), 
-    rgba(70, 70, 70, 0.5)
+    rgba(70, 0, 92, 0.7), 
+    rgba(70, 0, 92, 0.7)
   ),
   /* bottom, image */
   url('./Pictures/background-pic.jpg');
   background-repeat: no-repeat;
-  background-position: top;
-  height: 100vh;
+background-size: cover;
   display: flex;
   flex-direction: column;
 }
@@ -37,14 +36,12 @@
   flex-direction: column;
   width: 50%;
   justify-content: center;
-  background-color:aquamarine;
-  height: 100vh;
+  min-height: 80vh;
 }
 
 .searchresults {
   flex-direction: column;
   width:50%;
   justify-content: center;
-  background-color:bisque;
-  height: 100vh;
+  min-height: 80vh;
 }

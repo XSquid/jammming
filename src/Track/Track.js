@@ -1,37 +1,47 @@
-import React, { useState } from "react";
+import React, { useCallback } from "react";
 import './Track.css'
 
 
 
-function Tracks(props) {
+function Track(props) {
 
     let playlistTracks = null;
-    let searchResults = null;
-    
+    let searchResult = null;
 
-    if (props.searchResults) {
-        return searchResults = props.searchResults.map(item => <li>{item}<button className='addBtn'><span class="material-symbols-outlined">add</span></button></li>);
+    if (props.searchName) {
+        searchResult = props.searchName.map(item => <li>{item}<button className='addBtn'><span class="material-symbols-outlined">add</span></button></li>)
     }
 
 
     if (props.playlistTracks) {
-        return playlistTracks = <li>{props.playlistTracks}<button className='removeBtn'><span class="material-symbols-outlined">minimize</span></button></li>
+        playlistTracks = <li>{props.playlistTracks}</li>
     }
 
-    function searchSorter(obj) {
-        obj.map(item => {
-            return <li>item.song</li>;
-        });
-    };
+    const addTrack = (event) => {
+        props.onAdd(props.track)
+    }
+
+    const removeTrack = (event) => {
+        props.onRemove(props.track);
+    }
+
+    const whichButton = () => {
+        if (props.isRemoval) {
+            return (
+                <button className='removeBtn' onClick={removeTrack}><span class="material-symbols-outlined">minimize</span></button>
+            )
+        }
+        return (
+            <button className='addBtn' onClick={addTrack} ><span class="material-symbols-outlined">add</span></button>
+        )
+    }
 
     return (
-        <div>
-            <ul>
-            {searchResults}
-            {playlistTracks}
-            </ul>
+        <div className='track'>
+            <h3>{props.track.name}{whichButton()}</h3>
+            <p>{props.track.artist} | {props.track.album}</p>
         </div>
     )
 }
 
-export default Tracks;
+export default Track;

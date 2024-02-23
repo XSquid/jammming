@@ -1,4 +1,24 @@
 .searchbar {
-    background-color: blueviolet;
     padding: 5vh;
+    min-height: 10vh;
+}
+
+.searchInput {
+    padding: 1em;
+    font-size: 1.5em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.searchBtn {
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: rgb(8, 0, 80)
+}
+
+.searchBtn:active {
+    background-color:#282c34
 }

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Tracks from "../Track/Track";
+import React from "react";
 import Tracklist from "../Tracklist/Tracklist";
 import './SearchResults.css'
 
@@ -7,10 +6,12 @@ import './SearchResults.css'
 
 function SearchResults(props) {
 
+    const searchResults = props.searchResults
+//passing tracks as the property in searchresults and playlist so both can access the same property in Tracklist
     return (
         <div className='searchcomponent'>
-            <h2>search results here</h2>
-            <Tracklist searchResults={props.searchResults} />
+            <h2>Results</h2>
+            <Tracklist tracks={searchResults} onAdd={props.onAdd} />
 
         </div>
     );

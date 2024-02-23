@@ -7,7 +7,15 @@
 .addBtn{
     background:transparent;
     border: none;
-    color:green;
+    color:greenyellow;
+}
+
+.addBtn:active{
+    color:rgb(0, 117, 20)
+}
+
+.removeBtn:active{
+    color: rgb(117, 0, 0);
 }
 
 .removeBtn:hover{
@@ -15,5 +23,12 @@
 }
 
 .addBtn:hover{
-    text-shadow: -1px 0 darkgreen, 0 1px darkgreen, 1px 0 darkgreen, 0 -1px darkgreen;
+    text-shadow: -1px 0 rgb(0, 255, 0), 0 1px rgb(0, 255, 0), 1rgb(0, 255, 0)green, 0 rgb(0, 255, 0)green;
+}
+
+.track{
+    border-bottom: 2px solid white;
+    width: 50%;
+    margin-left: 25%;
+    justify-content: center;
 }
